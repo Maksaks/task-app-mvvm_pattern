@@ -1,0 +1,26 @@
+﻿<Window x:Class="Task_App.Views.EditTaskUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_App.Views" xmlns:viewmodels="clr-namespace:Task_App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:EditTaskUserVM}"
+        mc:Ignorable="d"
+        Title="Редагування задачі"
+        Height="420" 
+        Width="500"
+        ResizeMode="NoResize"
+        Background="DimGray">
+    <Border Background="Gray" Margin="30" BorderBrush="White" BorderThickness="2">
+        <StackPanel Margin="10">
+            <Label Content="Редагування задачі" FontSize="25" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="5 5 5 20"></Label>
+
+            <Label Content="Підзадачі:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" FontSize="15" Height="60" Margin="10 0 10 0" Text="{Binding tmp.SubTasks}" ></TextBox>
+
+            <Label Content="Прогрес:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <Slider Margin="10 0 10 0" Maximum="100" Minimum="0" Value="{Binding PROGRESS}" TickFrequency="5" TickPlacement="BottomRight" AutoToolTipPlacement="BottomRight"></Slider>
+
+            <Button Command="{Binding EditTaskCommand}" Content="Редагувати задачу" FontSize="18" FontWeight="Bold" Padding="10" Margin="10 40 10 10" BorderThickness="2" BorderBrush="Black"></Button>
+        </StackPanel>
+    </Border>
+</Window>

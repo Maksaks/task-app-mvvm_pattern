@@ -1,0 +1,80 @@
+﻿<Window x:Class="Task_App.Views.CreateTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_App.Views" xmlns:viewmodels="clr-namespace:Task_App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:CreateTaskVM}"
+        mc:Ignorable="d"
+        Title="Створення задачі"
+        Height="790" 
+        Width="500"
+        ResizeMode="NoResize"
+        Background="DimGray">
+    <Border Background="Gray" Margin="30" BorderBrush="White" BorderThickness="2">
+        <StackPanel Margin="10">
+            <Label Content="Нова задача" FontSize="25" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="5 5 5 20"></Label>
+            
+            <Label Content="Назва:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="30" Margin="10 0 10 10" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                <Validation.ErrorTemplate>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <AdornedElementPlaceholder x:Name="textBox" />
+                            <ItemsControl ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" Width="350" TextWrapping="Wrap"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Validation.ErrorTemplate>
+            </TextBox>
+            
+            <Label Content="Підзадачі:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="60" AcceptsReturn="True" TextWrapping="Wrap" Margin="10 0 10 0" Text="{Binding SubTasks}"></TextBox>
+
+            <Label Content="Дата кінця роботи:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <DatePicker FontSize="15" Height="30" Margin="10" SelectedDate="{Binding TimeBefore, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                <Validation.ErrorTemplate>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <AdornedElementPlaceholder x:Name="textBox" />
+                            <ItemsControl ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" Width="350" TextWrapping="Wrap"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Validation.ErrorTemplate>
+            </DatePicker>
+
+            <Label Content="Інформація:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="60" AcceptsReturn="True" TextWrapping="Wrap" Margin="10 0 10 0" Text="{Binding Info}"></TextBox>
+
+            <Label Content="Пріоритет:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <ComboBox Text="{Binding Priority}" FontSize="15" IsEditable="False" Margin="10 0 10 0">
+                <ComboBoxItem Content="Low"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="High"/>
+            </ComboBox>
+
+            <Label Content="Важкість:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <ComboBox Text="{Binding Complexity}" FontSize="15" IsEditable="False" Margin="10 0 10 0">
+                <ComboBoxItem Content="Easy"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="High"/>
+                <ComboBoxItem Content="Highest"/>
+            </ComboBox>
+
+            <Label Content="Ресурси:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" Height="60" Margin="10 0 10 0" Text="{Binding Resources}"></TextBox>
+
+            <Button Command="{Binding ConfirmCommand}" Content="Створити задачу" FontSize="18" FontWeight="Bold" Padding="10" Margin="10 40 10 10" BorderThickness="2" BorderBrush="Black"></Button>
+        </StackPanel>
+    </Border>
+</Window>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task_App.Models.AuthInApp">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQCAAAAAAAAAAAAAAAABAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\AuthInApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.Models.User">
+    <Position X="1" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAEgA=</HashCode>
+      <FileName>Models\DateBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.Models.TaskInfo">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAAAAAEIAAAgAAEAAAAAAQAAAAAAAEAECAAAECAAEA=</HashCode>
+      <FileName>Models\DateBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.Models.DateBase">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAASCBQAAAQAAAEAAAAAAAAABAAAAAgEAAAAAAAAAE=</HashCode>
+      <FileName>Models\DateBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.Models.UserManager">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQAAAQAACEAAAAAAAAAAAAAAAAEAAgAAAAAAQ=</HashCode>
+      <FileName>Models\UserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.Models.UserTaskManager">
+    <Position X="6" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="CompletedTask" Hidden="true" />
+      <Method Name="ConvertStringToEnum" Hidden="true" />
+      <Method Name="DeleteTask" Hidden="true" />
+      <Method Name="GetSortListTasks" Hidden="true" />
+      <Method Name="GetTimeBefore" Hidden="true" />
+      <Method Name="IsNumOnly" Hidden="true" />
+      <Method Name="SortListTasks" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAClAGEAARAACZAAkEAAACgFABAABgAAQAAAAAQAE=</HashCode>
+      <FileName>Models\UserTaskManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_App.TaskControllerSystem">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAkAUGAAAAACMAAEEAIAAABAAAIBAAAAAAAAAAAU=</HashCode>
+      <FileName>Models\TaskControllerSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Task_App.Models.TaskStatus">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Task_App.Models.TaskComplexity">
+    <Position X="1" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQkAAA=</HashCode>
+      <FileName>Models\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Task_App.Models.TaskPriority">
+    <Position X="3" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="Task_App.Views.EditUserInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_App.Views" xmlns:viewmodels="clr-namespace:Task_App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:EditUserInfoVM}"
+        mc:Ignorable="d"
+        Title="Зміна інформації про користувача"
+        Height="500" 
+        Width="350"
+        ResizeMode="NoResize"
+        Background="DimGray">
+    <Border Background="Gray" Margin="30" BorderBrush="White" BorderThickness="2">
+        <StackPanel Margin="10">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Інформація про користувача" FontSize="25" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="5 5 5 20"></TextBlock>
+            <Label Content="Логін:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="30" Margin="10 0 10 10" Text="{Binding LOGIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                <Validation.ErrorTemplate>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <AdornedElementPlaceholder x:Name="textBox" />
+                            <ItemsControl ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" Width="230" TextWrapping="Wrap"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Validation.ErrorTemplate>
+            </TextBox>
+            <Label Content="Пошта:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="30" Margin="10 0 10 0" Text="{Binding EMAIL}"></TextBox>
+            <Label Content="Новий пароль:" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left"  Margin="20 5 5 0" Padding="0"></Label>
+            <TextBox FontSize="15" Height="30" Margin="10 0 10 0"  Text="{Binding PASSWORD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}">
+                <Validation.ErrorTemplate>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <AdornedElementPlaceholder x:Name="textBox" />
+                            <ItemsControl ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" Width="230" TextWrapping="Wrap"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Validation.ErrorTemplate>
+            </TextBox>
+            <Button Command="{Binding EdituserInfoCommand}" Content="Змінити інформацію" FontSize="18" FontWeight="Bold" Padding="10" Margin="10 40 10 10" BorderThickness="2" BorderBrush="Black"></Button>
+        </StackPanel>
+    </Border>
+</Window>
