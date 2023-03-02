@@ -15,6 +15,7 @@ namespace Task_App.ViewModels
     class LogInVM : BaseViewModel, INotifyDataErrorInfo
     {
         private string _LOGIN;
+
         public string LOGIN
         {
             get => _LOGIN;
