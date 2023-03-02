@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Gyrocopter_UA\source\repos\Task_App\Task_App\obj\Debug\
+C:\Users\maksy\OneDrive\Робочий стіл\task-app-mvvm_pattern\Task_App\obj\Debug\
 Task_App
 none
 false
 DEBUG;TRACE
-C:\Users\Gyrocopter_UA\source\repos\Task_App\Task_App\App.xaml
-8857421273
+C:\Users\maksy\OneDrive\Робочий стіл\task-app-mvvm_pattern\Task_App\App.xaml
+8-590718157
 
-30-1930069040
-31-1241228043
+30-72990366
+31-860435416
 Views\AddUserToTaskWindow.xaml;Views\CreateTaskWindow.xaml;Views\EditTaskUserWindow.xaml;Views\EditTaskWindow.xaml;Views\EditUserInfoWindow.xaml;Views\LogInWindow.xaml;Views\MainWindow.xaml;Views\SignInWindow.xaml;
 
 True

@@ -16,6 +16,7 @@ namespace Task_App.ViewModels
         public AddUserToTaskWindow window;
         public TaskControllerSystem controller;
         private string _UserAddName;
+
         public string UserAddName {
             get => _UserAddName;
             set {
